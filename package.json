@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "rtmp-server": "^0.2.0"
+  },
+  "name": "rtmp-in-nodejs",
+  "version": "1.0.0",
+  "main": "src/rtmp_server.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tahadostifam/rtmp-in-nodejs.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Typescript",
+    "RTMP",
+    "OBS",
+    "Video",
+    "Streaming"
+  ],
+  "author": "Taha Dostifam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tahadostifam/rtmp-in-nodejs/issues"
+  },
+  "homepage": "https://github.com/tahadostifam/rtmp-in-nodejs#readme",
+  "description": ""
+}
