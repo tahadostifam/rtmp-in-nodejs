@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "rtmp-server": "^0.2.0"
+    "node-media-server": "^2.3.9"
   },
   "name": "rtmp-in-nodejs",
   "version": "1.0.0",
@@ -8,7 +8,6 @@
   "directories": {
     "test": "tests"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,5 +29,8 @@
     "url": "https://github.com/tahadostifam/rtmp-in-nodejs/issues"
   },
   "homepage": "https://github.com/tahadostifam/rtmp-in-nodejs#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node-media-server": "^2.3.1"
+  }
 }

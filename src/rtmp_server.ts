@@ -1,30 +1,18 @@
-import RtmpServer from 'rtmp-server'
-const rtmpServer = new RtmpServer();
+import NodeMediaServer from 'node-media-server'
 
-rtmpServer.on('error', err => {
-  throw err;
-});
+const config = {
+  rtmp: {
+    port: 1935,
+    chunk_size: 60000,
+    gop_cache: true,
+    ping: 30,
+    ping_timeout: 60
+  },
+  http: {
+    port: 8000,
+    allow_origin: '*'
+  }
+};
 
-rtmpServer.on('client', client => {
-  //client.on('command', command => {
-  //  console.log(command.cmd, command);
-  //});
-
-  client.on('connect', () => {
-     console.log('connect', client.app);
-  });
-  
-  client.on('play', ({ streamName }) => {
-    console.log('PLAY', streamName);
-  });
-  
-  client.on('publish', ({ streamName }) => {
-    console.log('PUBLISH', streamName);
-  });
-  
-  client.on('stop', () => {
-    console.log('client disconnected');
-  });
-});
-
-rtmpServer.listen(1935);
+var nms = new NodeMediaServer(config)
+nms.run();
