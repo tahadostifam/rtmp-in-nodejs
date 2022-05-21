@@ -1,0 +1,11 @@
+body{
+    min-height: 100vh;
+    background-color: #080808;
+}
+#live_elm{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 80px;
+    border-radius: 5px;
+}

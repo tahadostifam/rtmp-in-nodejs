@@ -4,11 +4,13 @@
   },
   "name": "rtmp-in-nodejs",
   "version": "1.0.0",
-  "main": "src/rtmp_server.ts",
+  "main": "src/rtmp_server.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
+    "start": "node src/rtmp_server.js",
+    "dev": "nodemon src/rtmp_server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +19,6 @@
   },
   "keywords": [
     "Nodejs",
-    "Typescript",
     "RTMP",
     "OBS",
     "Video",
