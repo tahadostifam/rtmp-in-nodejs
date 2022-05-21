@@ -1,8 +1,16 @@
-body{
-    min-height: 100vh;
-    background-color: #080808;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+html{
+    background-color: #080808;
+    color: #fff;
+}
+
 #live_elm{
+    background-color: #000;
     position: relative;
     left: 50%;
     transform: translate(-50%);

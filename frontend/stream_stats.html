@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Index</title>
+        <link rel="stylesheet" href="./styles/uikit.min.css" />
+        <link rel="stylesheet" href="./styles/styles.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <div class="uk-container uk-margin-large-top">
+                    <h1 class="uk-text-success">STREAM STATS</h1>
+                    <template v-if="loading"> Loading... </template>
+                    <template v-else>
+                        <template v-if="errorOccurred">
+                            <span class="uk-text-danger">Error!!</span>
+                        </template>
+                        <template v-else>
+                            <ul v-if="streamsList" class="uk-list">
+                                <li v-for="(item, index) in streamsList" v-key="index">
+                                    <div class="uk-alert-success" uk-alert>
+                                        <span class="uk-display-block uk-margin-small-bottom">Name: {{item.publisher.stream}}</span>
+                                        <span class="uk-display-block uk-margin-small-bottom">clientID: {{item.publisher.clientId}}</span>
+                                        <span class="uk-display-block uk-margin-small-bottom">connectCreated: {{item.publisher.connectCreated}}</span>
+                                        <span class="uk-display-block uk-margin-small-bottom">ip: {{item.publisher.ip}}</span>
+                                        <span class="uk-display-block uk-margin-small-bottom">Audio Codec: {{item.publisher.audio.codec}}</span>
+                                        <span class="uk-display-block uk-margin-small-bottom">Video Codec: {{item.publisher.video.codec}}</span>
+                                        <span class="uk-display-block uk-margin-small-bottom">Video Size: {{item.publisher.video.width}}x{{item.publisher.video.height}}</span>
+                                        <span class="uk-display-block uk-margin-small-bottom">Video FPS: {{item.publisher.video.fps}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <template v-else> No streaming </template>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <script src="./scripts/axios.min.js"></script>
+        <script src="./scripts/uikit.min.js"></script>
+        <script src="./scripts/vue.min.js"></script>
+        <script src="./scripts/stream_stats.js"></script>
+    </body>
+</html>
