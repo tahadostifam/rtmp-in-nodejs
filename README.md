@@ -19,3 +19,8 @@ cd backend; npm install;
   npm i http-server
   http-server . -p 8080
   ```
+
+### Obs-Studio
+Service : Custom   
+Server : rtmp://localhost/live   
+Stream Key : `stream name`   
